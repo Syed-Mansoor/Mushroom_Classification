@@ -34,6 +34,7 @@ class ModelTrainer:
                 test_target_array
             )
             
+            # Define models and their hyperparameters
             models = {
                 "Logistic Regression": LogisticRegression(max_iter=1000),
                 "XGBoost Classifier": XGBClassifier(),
@@ -86,16 +87,14 @@ class ModelTrainer:
                 }                
             }
             
-            model_report: dict = evaluate_model(TrainFeatures=X_train, TrainTarget=y_train,
-                                                TestFeatures=X_test, TestTarget=y_test,
-                                                models=models, params=params)
-            
+            # Evaluate models
+            model_report = evaluate_model(X_train, y_train, X_test, y_test, models, params)
             logging.info("Model hyperparameter tuning done")
             logging.info("Model training complete")
             
-            # Get best model score and name
-            best_model_score = max(sorted(model_report.values()))
-            best_model_name = list(model_report.keys())[list(model_report.values()).index(best_model_score)]
+            # Determine the best model
+            best_model_score = max(model_report.values())
+            best_model_name = [name for name, score in model_report.items() if score == best_model_score][0]
             best_model = models[best_model_name]
             
             if best_model_score < 0.6:
@@ -116,6 +115,7 @@ class ModelTrainer:
                 
                 logging.info("Using the best model to predict on test data")
 
+                # Predict and evaluate the model
                 predicted = best_model.predict(X_test)
                 accuracy_score_result = accuracy_score(y_test, predicted)
                 logging.info(f"Prediction result on test data: Accuracy Score -> {accuracy_score_result}")

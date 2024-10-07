@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1728319263964
+current_stage: None
+description: ''
+last_updated_timestamp: 1728319263964
+name: new
+run_id: ea95e000c8724211848b851af06fc24b
+run_link: ''
+source: file:///D:/Mushroom_classification/mlruns/0/ea95e000c8724211848b851af06fc24b/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///D:/Mushroom_classification/mlruns/0/ea95e000c8724211848b851af06fc24b/artifacts/model
+user_id: null
+version: 1

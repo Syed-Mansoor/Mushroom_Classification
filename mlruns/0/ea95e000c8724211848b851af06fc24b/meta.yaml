@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Mushroom_classification/mlruns/0/ea95e000c8724211848b851af06fc24b/artifacts
+end_time: 1728319176448
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ea95e000c8724211848b851af06fc24b
+run_name: awesome-ox-469
+run_uuid: ea95e000c8724211848b851af06fc24b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1728319167196
+status: 3
+tags: []
+user_id: HP
