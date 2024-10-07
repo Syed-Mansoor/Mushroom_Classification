@@ -1,3 +1,3 @@
-from mushroom.components.data_ingestion import DataIngestion
-obj = DataIngestion()
-obj.initiate_data_ingestion()
+from mushroom.pipeline.training_pipeline import TrainPipeline
+obj = TrainPipeline()
+obj.run_pipeline()
