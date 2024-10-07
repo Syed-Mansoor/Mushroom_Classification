@@ -1,0 +1,8 @@
+[2024-10-07 15:29:32,594: INFO: __init__]: Logging setup complete.
+[2024-10-07 15:29:32,649: INFO: data_ingestion]: Created data ingestion configuration and directories
+[2024-10-07 15:29:32,649: INFO: data_ingestion]: Entered the data ingestion method or component
+[2024-10-07 15:29:32,790: INFO: data_ingestion]: Read the dataset as dataframe
+[2024-10-07 15:29:32,988: INFO: data_ingestion]: Raw data saved successfully
+[2024-10-07 15:29:32,988: INFO: data_ingestion]: Train test split initiated
+[2024-10-07 15:29:32,997: INFO: data_ingestion]: Train test split completed
+[2024-10-07 15:29:33,101: INFO: data_ingestion]: Train and test sets saved successfully
