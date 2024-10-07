@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Mushroom_classification/mlruns/0/92dc1c8f52984a3ea8d59fe7a1929296/artifacts
+end_time: 1728316996263
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 92dc1c8f52984a3ea8d59fe7a1929296
+run_name: unleashed-cat-244
+run_uuid: 92dc1c8f52984a3ea8d59fe7a1929296
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1728316970230
+status: 3
+tags: []
+user_id: HP
