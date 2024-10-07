@@ -1,0 +1,14 @@
+[2024-10-07 15:43:47,666: INFO: __init__]: Logging setup complete.
+[2024-10-07 15:43:47,716: INFO: data_ingestion]: Created data ingestion configuration and directories
+[2024-10-07 15:43:47,716: INFO: data_ingestion]: Entered the data ingestion method or component
+[2024-10-07 15:43:47,807: INFO: data_ingestion]: Read the dataset as dataframe
+[2024-10-07 15:43:47,904: INFO: data_ingestion]: Raw data saved successfully
+[2024-10-07 15:43:47,904: INFO: data_ingestion]: Train test split initiated
+[2024-10-07 15:43:47,912: INFO: data_ingestion]: Train test split completed
+[2024-10-07 15:43:48,026: INFO: data_ingestion]: Train and test sets saved successfully
+[2024-10-07 15:43:48,027: INFO: data_transformation]: Reading train and test data
+[2024-10-07 15:43:48,245: INFO: data_transformation]: Obtaining preprocessor object
+[2024-10-07 15:43:48,245: INFO: data_transformation]: Feature columns: ['bruises', 'gill-spacing', 'gill-size', 'gill-color', 'stalk-root', 'ring-type', 'spore-print-color']
+[2024-10-07 15:43:48,261: INFO: data_transformation]: Applying preprocessor object to train and test input features
+[2024-10-07 15:43:48,355: INFO: data_transformation]: Applying label encoder to target data
+[2024-10-07 15:43:48,372: INFO: training_pipeline]: Data ingestion and transformation completed successfully.
