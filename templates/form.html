@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Roboto Font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome -->
+    <title>Mushroom Classification</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+            font-family: 'Roboto', sans-serif; /* Updated font family */
+        }
+        .left-half {
+            flex: 0.4; /* Adjusted size */
+            background-color: #4caf50;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+        .right-half {
+            flex: 1;
+            padding: 20px;
+            background-color: #e0f7fa; /* Light teal background for contrast */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            border-radius: 8px; /* Rounded corners */
+        }
+        .result-section {
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            width: 80%; /* Set width */
+            margin: 20px auto; /* Center it */
+        }
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5rem; /* Icon size */
+        }
+        .btn-predict {
+            margin-top: 20px;
+        }
+        /* Smaller input for results */
+        .result-section h3 {
+            font-size: 1.5rem; /* Smaller font size */
+        }
+        /* Updated color styles */
+        h1, h2, h3 {
+            color: #ffffff; /* White for headings in left half */
+        }
+        .right-half h1 {
+            color: #333333; /* Dark color for main heading */
+        }
+        .form-control {
+            border-radius: 5px; /* Rounded corners for form controls */
+        }
+        .btn-primary {
+            background-color: #007bff; /* Bootstrap primary color */
+            border: none; /* No border */
+        }
+    </style>
+</head>
+<body>
+    <div class="left-half">
+        <h1>Syed Mansoor</h1> <!-- Replace with your name -->
+        <p>Predict whether a mushroom is edible or poisonous based on its characteristics.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/syed_mansoor_001/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/syed-mansoor-88404a1b0/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Syed-Mansoor" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:saeedmansoor56@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a> <!-- Update email -->
+        </div>
+        
+        {% if results %}
+        <div class="result-section" style="background-color: {{ 'green' if results == 'edible' else 'red' }}; color: white;">
+            <h3>
+                The Mushroom is <strong>{{ results }}</strong>
+            </h3>
+        </div>
+        {% endif %}
+    </div>
+    <div class="right-half">
+        <h1 class="text-center">Predict Mushroom Type</h1>
+        <form id="mushroomForm" action="{{ url_for('predict_datapoint') }}" method="post">
+            <fieldset>
+                <legend class="text-center">Input Details</legend>
+
+                <div class="form-group">
+                    <label for="bruises">Bruises:</label>
+                    <select class="form-control" name="bruises" required>
+                        <option class="placeholder" selected disabled value="">Select bruises</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="gill-spacing">Gill Spacing:</label>
+                    <select class="form-control" name="gill-spacing" required>
+                        <option class="placeholder" selected disabled value="">Select gill-spacing</option>
+                        <option value="close">Close</option>
+                        <option value="crowded">Crowded</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="gill-size">Gill Size:</label>
+                    <select class="form-control" name="gill-size" required>
+                        <option class="placeholder" selected disabled value="">Select gill-size</option>
+                        <option value="narrow">Narrow</option>
+                        <option value="broad">Broad</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="gill-color">Gill Color:</label>
+                    <select class="form-control" name="gill-color" required>
+                        <option class="placeholder" selected disabled value="">Select gill-color</option>
+                        <option value="black">Black</option>
+                        <option value="brown">Brown</option>
+                        <option value="gray">Gray</option>
+                        <option value="pink">Pink</option>
+                        <option value="white">White</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="purple">Purple</option>
+                        <option value="red">Red</option>
+                        <option value="buff">Buff</option>
+                        <option value="green">Green</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="orange">Orange</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="stalk-root">Stalk Root:</label>
+                    <select class="form-control" name="stalk-root" required>
+                        <option class="placeholder" selected disabled value="">Select stalk-root</option>
+                        <option value="equal">Equal</option>
+                        <option value="club">Club</option>
+                        <option value="bulbous">Bulbous</option>
+                        <option value="rooted">Rooted</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ring-type">Ring Type:</label>
+                    <select class="form-control" name="ring-type" required>
+                        <option class="placeholder" selected disabled value="">Select ring-type</option>
+                        <option value="pendant">Pendant</option>
+                        <option value="evanescent">Evanescent</option>
+                        <option value="large">Large</option>
+                        <option value="flaring">Flaring</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="spore-print-color">Spore Print Color:</label>
+                    <select class="form-control" name="spore-print-color" required>
+                        <option class="placeholder" selected disabled value="">Select spore-print-color</option>
+                        <option value="black">Black</option>
+                        <option value="brown">Brown</option>
+                        <option value="white">White</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="purple">Purple</option>
+                        <option value="buff">Buff</option>
+                        <option value="green">Green</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="orange">Orange</option>
+                    </select>
+                </div>
+
+                <div class="text-center">
+                    <input class="btn btn-primary btn-predict" type="submit" value="Predict Mushroom Type">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

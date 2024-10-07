@@ -1,0 +1,35 @@
+/* styles.css */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #343a40;
+}
+
+h3 {
+    margin: 0; /* Reset margin for the result heading */
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.result-section {
+    border-radius: 5px;
+}
