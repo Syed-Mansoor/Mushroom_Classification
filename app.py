@@ -5,7 +5,10 @@ import pandas as pd
 from flask import Flask, render_template, request
 import pickle
 
+
+
 from mushroom.pipeline.prediction_pipeline import CustomData, PredictionPipeline
+
 
 application = Flask(__name__)
 
