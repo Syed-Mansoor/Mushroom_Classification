@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Mushroom_classification/mlruns/0/dc6180d853774ebc9882a93ab9d2e14e/artifacts
+end_time: 1728448546000
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: dc6180d853774ebc9882a93ab9d2e14e
+run_name: crawling-fish-182
+run_uuid: dc6180d853774ebc9882a93ab9d2e14e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1728448519055
+status: 3
+tags: []
+user_id: HP

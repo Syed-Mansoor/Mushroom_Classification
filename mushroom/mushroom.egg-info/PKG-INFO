@@ -1,0 +1,118 @@
+Metadata-Version: 2.1
+Name: mushroom
+Version: 0.0.0
+Summary: A small python package for mushroom classification
+Home-page: https://github.com/syed-mansoor/mushroom_classification/issues
+Author: syed-mansoor
+Author-email: saeedmansoor56@gmail.com
+Project-URL: Bug Tracker, https://github.com/syed-mansoor/mushroom_classification/issues
+License-File: LICENSE
+
+# Mushroom Classification Project
+# Problem Statement :
+ The Audubon Society Field Guide to North American Mushrooms contains descriptions of hypothetical samples corresponding to 23 species of gilled mushrooms in the Agaricus and Lepiota Family Mushroom (1981). Each species is labelled as either definitely edible, definitely poisonous, or maybe edible but not recommended. This last category was merged with the toxic category. The Guide asserts unequivocally that there is no simple rule for judging a mushroom's edibility, such as "leaflets three, leave it be" for Poisonous Oak and Ivy.
+
+## Project Overview
+
+The **Mushroom Classification Project** aims to leverage machine learning techniques to classify mushrooms as either edible or poisonous based on their physical characteristics. This project not only serves as a practical application of data science but also emphasizes the importance of safety in food consumption.
+
+### Objectives
+
+- Develop a predictive model that accurately classifies mushrooms based on various features.
+- Utilize multiple machine learning algorithms to determine the best model for this classification task.
+- Implement MLflow for experiment tracking, model management, and reproducibility.
+
+## Features
+
+- **Machine Learning Algorithms**: The project employs various algorithms, including Logistic Regression, Decision Trees, Random Forests, and Gradient Boosting, among others.
+- **Model Evaluation**: The model's performance is assessed using accuracy scores and confusion matrices to ensure reliability.
+- **Experiment Tracking**: MLflow is integrated for tracking experiments, logging parameters, metrics, and models.
+
+ABSTRACT : Mushrooms have been consumed since earliest history. The word Mushroom is derived from the French word for Fungi and Mold. Now-a-days, Mushroom are popular valuable food because they are low in calories, carbohydrate, Fat, sodium and also cholesterol free. Besides this, Mushroom provides important nutrients, including selenium, potassium, riboflavin, niacin, Vitamin D, proteins and fiber. All together with a long history as food source. Mushroom are important for their healing capacity and properties in traditional medicine. It has reported beneficial effects for health and treatment of some disease. Many nutraceutical properties are described in Mushroom like cancer and antitumor attributes. Mushroom act as antibacterial, immune system enhancer and cholesterol lowering Agent. Additionally, they are important source of bio-active compounds. This work is a machine learning model that classifies mushrooms into 2 classes: Poisonous and Edible depending on the features of the mushroom. During this machine learning implementation, we are going to see which features are important to predict whether a mushroom is poisonous or edible.
+
+
+The main goal is to predict which mushroom is poisonous & which is edible.
+
+## Tools Used :
+This project utilizes the following technologies and tools:
+- **Programming Languages:** Python
+- **Data Manipulation:** Pandas, NumPy
+- **Data Visualization:** Matplotlib, Seaborn
+- **Web Framework:** Flask (for the web application)
+- **Frontend Technologies:** HTML, CSS
+- **Machine Learning:** Scikit-learn, MLflow
+- **Data Version Control:** DVC (Data Version Control)
+- **Development Environment:** Jupyter Notebook
+
+## Dataset
+
+The dataset utilized in this project contains diverse attributes of mushrooms, including but not limited to:
+
+- **Bruises**: Presence of bruises (Yes/No)
+- **Gill Spacing**: Spacing of gills (Close/Crowded)
+- **Gill Size**: Size of gills (Narrow/Broad)
+- **Gill Color**: Color of gills (e.g., Black, Brown, White)
+- **Stalk Root**: Type of stalk root (e.g., Equal, Club)
+- **Ring Type**: Type of ring (e.g., Pendant, Large)
+- **Spore Print Color**: Color of spore print (e.g., Black, Brown)
+- 
+
+# Mushroom Classification Project
+
+## Overview
+This project aims to classify mushrooms as edible or poisonous based on their physical characteristics. By leveraging machine learning algorithms, we can predict the safety of consuming different mushroom species, thereby contributing to public safety and awareness.
+
+## Table of Contents
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Contact](#contact)
+- 
+# Architecture
+
+![alt text](image.png)
+  
+
+
+
+## Installation
+
+Follow these steps to set up the project locally:
+
+1. **Clone the Repository**:
+ ```bash
+git clone https://github.com/Syed-Mansoor/new_project.git
+cd new_project
+
+2 Create a conda environment:
+```bash
+ conda create --name mushroom-classification python=3.8
+ ```
+
+3 Activate the environment:
+```bash
+conda activate mushroom-classification
+```
+4. **Install Required Packages: Make sure to have Python installed, then run:**
+```bash
+pip install -r requirements.txt
+ ```
+
+## View MLflow UI
+```bash
+mlflow ui
+```
+## Contribution Guidelines
+Contributions are welcomed! If you have suggestions for improvements or additional features, please fork the repository and submit a pull request. Ensure that your code adheres to the project's coding standards and includes appropriate tests.
+# License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+## Contact Information
+
+For questions or collaborations, please reach out via:
+
+- [Instagram](https://www.instagram.com/syed_mansoor_001/)
+- [LinkedIn](https://www.linkedin.com/in/syed-mansoor-88404a1b0/)
+- [GitHub](https://github.com/Syed-Mansoor)
+
