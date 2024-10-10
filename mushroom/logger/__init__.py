@@ -1,25 +1,23 @@
-import logging 
 import os
-from from_root import from_root
-from datetime import datetime
+import sys
+import logging
 
-# Generate log file name
-LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
-log_dir = 'logs'
-logs_path = os.path.join(from_root(), log_dir, LOG_FILE)  # Ensure from_root() is called
+logging_str = "[%(asctime)s: %(levelname)s: %(module)s: %(message)s]"
 
-# Create logs directory if it doesn't exist
-os.makedirs(os.path.join(from_root(), log_dir), exist_ok=True)
+log_dir = "logs"
 
-# Configure logging
+log_filepath = os.path.join(log_dir, "mushroom.log")
+os.makedirs(log_dir, exist_ok=True)
+
+
 logging.basicConfig(
-    level=logging.INFO,
-    format="[%(asctime)s: %(levelname)s: %(module)s]: %(message)s",
+    level = logging.INFO,
+    format = logging_str,
+
     handlers=[
-        logging.StreamHandler(),  # Console output
-        logging.FileHandler(logs_path)  # File output
+        logging.FileHandler(log_filepath),
+        logging.StreamHandler(sys.stdout)
     ]
 )
 
-# Example logging
-logging.info("Logging setup complete.")
+logger = logging.getLogger("mlProjectLogger")
