@@ -55,7 +55,7 @@ The dataset includes diverse attributes of mushrooms, such as:
 
 ## Architecture
 
-![Mushroom Classification Architecture](image.png)
+![alt text](image-1.png)
 
 ## Installation
 
